@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#64d8ef</color>
+    <color name="colorPrimaryDark">#1f8a9f</color>
+    <color name="colorAccent">#f9266f</color>
+    <color name="colorAccentDark">#9b0d3e</color>
+    <color name="colorBackground">#ebebeb</color>
+    <color name="colorWhite">#fff</color>
+
+    <color name="colorToast">#4d4b58</color>
+
+
+    <color name="colorGrey">#d6d6d6</color>
+    <color name="colorBackGrey">#7e7d7d</color>
+    <color name="colorWhiteGrey">#f6f6f6</color>
+    <color name="colorTranslucent">#cc222222</color>
+    <color name="colorTransparent">#857b7a7a</color>
+    <color name="colorAllTransparent">#00000000</color>
+
+    <color name="colorLightGreen">#8BC34A</color><color name="colorLightGreenDark">#689F38</color>
+    <color name="colorTeal">#009688</color><color name="colorTealDark">#00796B</color>
+    <color name="colorAmber">#FFC107</color><color name="colorAmberDark">#FFA000</color>
+    <color name="colorDeepOrange">#FF5722</color><color name="colorDeepOrangeDark">#E64A19</color>
+    <color name="colorBrown">#795548</color><color name="colorBrownDark">#5D4037</color>
+    <color name="colorBuleGrey">#607D8B</color><color name="colorBuleGreyDark">#455A64</color>
+    <color name="colorBlue">#2196F3</color><color name="colorBlueDark">#1976D2</color>
+
+    <color name="booking">#f9266f</color>
+    <color name="staying">#64d8ef</color>
+    <color name="left">#a981ff</color>
+</resources>

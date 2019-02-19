@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ofcoder.lazy.window.activity.MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_windowsScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary" />
+
+    <ImageView
+        android:id="@+id/iv_bottom_menu"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/bg_iv_main_bottom_menu" />
+
+    <ImageView
+        android:id="@+id/iv_bottom_menu_keyboard"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_iv_main_bottom_menu_keyboard"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_bottom_menu_set"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_iv_main_bottom_menu_set"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_bottom_menu_help"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_iv_main_bottom_menu_help"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_bottom_menu_file"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_iv_main_bottom_menu_file"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_bottom_menu_feedback"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_iv_main_bottom_menu_feedback"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/ll_keyboard"
+        layout="@layout/keyboard"
+        android:visibility="gone"/>
+
+</RelativeLayout>
