@@ -4,13 +4,17 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.ofcoder.lazy.R;
 import com.ofcoder.lazy.domain.enums.IntentExtraEnum;
+import com.ofcoder.lazy.net.Client;
 import com.ofcoder.lazy.window.view.GracefullyToast;
 import com.yinfork.linedlayout.LinedRelativeLayout;
 
 import org.apache.commons.lang3.StringUtils;
+
+import java.io.IOException;
 
 public class LoginActivity extends BaseActivity implements View.OnClickListener {
     private LinedRelativeLayout layout;
@@ -41,24 +45,35 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         layout.setLinePaddingRight(0);
         layout.setAnimDuration(300);
         btn_connect.setOnClickListener(this);
+
+        client.start();
     }
 
 
+    Client client = new Client();
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_connect:
                 String host = et_connect_host.getText().toString();
-                String port = et_connect_port.getText().toString();
-                if (StringUtils.isEmpty(host) || StringUtils.isEmpty(port)) {
-                    GracefullyToast.show(this, "host, port is required param.");
-                    return;
+                Integer port = Integer.valueOf(et_connect_port.getText().toString());
+                String msg = ((EditText)findViewById(R.id.xxxxx)).getText().toString();
+
+                try {
+                    client.send(msg, host, port);
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-                Intent intent = new Intent(this, MainActivity.class);
-                intent.putExtra(IntentExtraEnum.HOST.name(), host);
-                intent.putExtra(IntentExtraEnum.PORT.name(), Integer.parseInt(port));
-                startActivity(intent);
-                this.finish();
+
+//                if (StringUtils.isEmpty(host) || StringUtils.isEmpty(port)) {
+//                    GracefullyToast.show(this, "host, port is required param.");
+//                    return;
+//                }
+//                Intent intent = new Intent(this, MainActivity.class);
+//                intent.putExtra(IntentExtraEnum.HOST.name(), host);
+//                intent.putExtra(IntentExtraEnum.PORT.name(), Integer.parseInt(port));
+//                startActivity(intent);
+//                this.finish();
                 break;
             default:
                 break;
